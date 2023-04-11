@@ -1,11 +1,19 @@
-
+import useState from "react"
 
 const CreateTask = () => {
     
+    const [currentTask, setTask] = useState({
+        title: "",
+        description: "",
+        isDone:"",
+        id:"",
+    })
+
+    const handleTitleChange = (event) => {console.log(event.target.value)}
     return(
         <form>
             <b>
-        <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
+        <label htmlFor="Title" style={{color:"whitesmoke"}} onChange={handleTitleChange}>Title :</label>
         <br/>
         <input id="Title" type="text"></input><br/><br/>
         
