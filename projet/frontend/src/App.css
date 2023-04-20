@@ -25,3 +25,12 @@ label {
 h1 {
     color: White;
 }
+
+h2 {
+    color: whitesmoke;
+    margin-top: 3px;
+}
+
+p,button,h3 {
+    color:whitesmoke;
+}

@@ -1,5 +1,4 @@
-import axios from "axios"
-import {useNavigate, useParams} from "react-router-dom"
+
 import { useState } from "react"
 
 const update = () => {console.log("a")}

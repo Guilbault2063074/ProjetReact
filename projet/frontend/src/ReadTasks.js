@@ -7,15 +7,19 @@ function ReadTask(){
     const [tasks, setTasks] = useState([]);
     
     useEffect(() =>{
-        axios.get("http://localhost:3000/tasks")
-        .then((resp) => setTasks(resp.data))
+        //axios.get("http://localhost:3000/tasks")
+        //.then((resp) => setTasks(resp.data))
+        setTasks(
+            [{"_id":{"$oid":"6441c034854f4940bababe0f"},"title":"Finish back-end","description":"Complete all 3 layer of backend","isDone":"on"}]
+        )
     }, [])
+
 
     return(
         <div>
             <h1>Tasks</h1>
-                {tasks.map(tasks =>{
-                    <TaskView title={tasks.title} description={tasks.description} isDone={tasks.isDone}></TaskView>
+                {tasks.map((task) =>{
+                    return <TaskView key={task.$oid} title={task.title} description={task.description} isDone={task.isDone}></TaskView>
                 })}
         </div>
     )

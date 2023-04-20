@@ -32,7 +32,7 @@ const CreateTask = () => {
         <input id="Done" type="checkbox" name="isDone" onChange={HandleChange}></input><br/><br/>
         
 
-        <input id="Submit" type="submit" value="Submit Task" style={{color:"whitesmoke", backgroundColor:"#43223b"}} onChange={HandleChange}></input>
+        <input id="Submit" type="submit" value="Submit Task" style={{color:"whitesmoke", backgroundColor:"#43223b",borderRadius:"10px"}} onChange={HandleChange}></input>
         </b>
         </form>
         
