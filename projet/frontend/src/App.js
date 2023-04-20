@@ -1,14 +1,24 @@
 import CreateTask from "./CreateTask"
-
+import { BrowserRouter, Link } from 'react-router-dom';
+import './App.css'
 
 function App() {
   document.body.style = 'background: #43223b;';
   return (
-    <div className="App">
-      <header className="App-header">
+    <BrowserRouter>
+    <div>
+      
+
+      <ul>
+          <li><Link to="/">Create a Task</Link></li>
+          <li><Link to="/About">List all Tasks</Link></li>
+        </ul>
+
+
         <CreateTask></CreateTask>
-      </header>
+      
     </div>
+    </BrowserRouter>
   );
 }
 

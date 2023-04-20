@@ -30,7 +30,7 @@ function updateTask(){
             <br/>
             <label>
                 Status : 
-                <input type="text" value={status} onChange={event => setStatus(event.target.value)}/>
+                <input type="checkbox" value={status} onChange={event => setStatus(event.target.value)}/>
             </label>
             <br/>
             <button type="update" onClick={update}>Update</button>

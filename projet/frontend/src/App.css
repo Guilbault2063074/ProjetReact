@@ -1,0 +1,23 @@
+ul {
+    background-color: #a3528f;
+    padding: 20px;
+    text-align: left;
+    list-style-type: square;
+    color: blue;
+}
+
+li {
+    font-size: larger;
+}
+
+div {
+    text-align: center;
+}
+
+input {
+    font-size: large;
+}
+
+label {
+    font-size: larger;
+}
