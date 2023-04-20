@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import TaskView from "./TaskView"
+import axios from "axios";
+
 
 function ReadTask(){
-    let nav = useNaviguate();
     const [tasks, setTasks] = useState([]);
     
     useEffect(() =>{
-        axios.get("http://localhost:3000/task")
+        axios.get("http://localhost:3000/tasks")
         .then((resp) => setTasks(resp.data))
     }, [])
 
     return(
         <div>
-            <h1>List of task</h1>
+            <h1>Tasks</h1>
                 {tasks.map(tasks =>{
-                    <TaskView></TaskView>
+                    <TaskView title={tasks.title} description={tasks.description} isDone={tasks.isDone}></TaskView>
                 })}
         </div>
     )

@@ -1,6 +1,7 @@
 import CreateTask from "./CreateTask"
 import { BrowserRouter, Link } from 'react-router-dom';
 import './App.css'
+import RouteComponent from "./routes";
 
 function App() {
   document.body.style = 'background: #43223b;';
@@ -11,11 +12,12 @@ function App() {
 
       <ul>
           <li><Link to="/">Create a Task</Link></li>
-          <li><Link to="/About">List all Tasks</Link></li>
+          <li><Link to="/Tasks">List all Tasks</Link></li>
         </ul>
 
 
-        <CreateTask></CreateTask>
+        <RouteComponent>
+        </RouteComponent>
       
     </div>
     </BrowserRouter>
