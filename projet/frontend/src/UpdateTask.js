@@ -1,40 +1,47 @@
-import react from "react";
 import axios from "axios"
-import { useEffect, useState } from "react";
-import {useNaviguate, useParams} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
+import { useState } from "react"
 
+const update = () => {console.log("a")}
 
-function updateTask(){
-    let nav = useNaviguate();
-    let {taskId} = useParams();
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [status, setStatus] = useState("");
+function UpdateTask() {
 
+    const [currentTask, setTask] = useState({
+        title: "",
+        description: "",
+        isDone:"",
+        id:"",
+    })
+    const HandleChange = (event) => {
+        const { name, value } = event.target;
+        setTask({...currentTask, [name]: value });
+    }
     
 
     return(
         <div>
             <h1>Update a task</h1>
-            {title &&
+           
             <div>
                 <label>
                 Title : 
-                <input type="text" value={title} onChange={event => setTitle(event.target.value)}/>
+                <input type="text" onChange={HandleChange}/>
             </label>
             <br/>
             <label>
                 Description : 
-                <input type="text" value={description} onChange={event => setDescription(event.target.value)} />
+                <input type="text"  onChange={HandleChange} />
             </label>
             <br/>
             <label>
                 Status : 
-                <input type="checkbox" value={status} onChange={event => setStatus(event.target.value)}/>
+                <input type="checkbox"  onChange={HandleChange}/>
             </label>
             <br/>
-            <button type="update" onClick={update}>Update</button>
-            </div>}
+            <button type="button" onClick={update}>Update</button>
+            </div>
         </div>
     )
 }
+
+export default UpdateTask
