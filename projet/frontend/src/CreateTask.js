@@ -13,8 +13,10 @@ const CreateTask = () => {
         setTask({...currentTask, [name]: value });
     }
 
+    const onSubmit = () => {alert(currentTask.title)}
+
     return(
-        <form>
+        <form onSubmit={onSubmit}>
             <b>
         <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
         <br/>
