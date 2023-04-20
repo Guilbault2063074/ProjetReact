@@ -8,26 +8,29 @@ const CreateTask = () => {
         isDone:"",
         id:"",
     })
+    const HandleChange = (event) => {
+        const { name, value } = event.target;
+        setTask({...currentTask, [name]: value });
+    }
 
-    const handleTitleChange = (event) => {console.log(event.target.value)}
     return(
         <form>
             <b>
-        <label htmlFor="Title" style={{color:"whitesmoke"}} onChange={handleTitleChange}>Title :</label>
+        <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
         <br/>
-        <input id="Title" type="text"></input><br/><br/>
+        <input id="Title" type="text" name="title" onChange={HandleChange}></input><br/><br/>
         
 
-        <label htmlFor="Description" style={{color:"whitesmoke",}}>Description :</label>
+        <label htmlFor="Description" style={{color:"whitesmoke",}} >Description :</label>
         <br/>
-        <input id="Description" type="text"></input><br/><br/>
+        <input id="Description" type="text" name="description" onChange={HandleChange}></input><br/><br/>
 
 
         <label htmlFor="Title" style={{color:"whitesmoke"}}>Done :</label>
-        <input id="Done" type="checkbox"></input><br/><br/>
+        <input id="Done" type="checkbox" name="isDone" onChange={HandleChange}></input><br/><br/>
         
 
-        <input id="Submit" type="submit" value="Submit Task" style={{color:"whitesmoke", backgroundColor:"#43223b"}}></input>
+        <input id="Submit" type="submit" value="Submit Task" style={{color:"whitesmoke", backgroundColor:"#43223b"}} onChange={HandleChange}></input>
         </b>
         </form>
         
