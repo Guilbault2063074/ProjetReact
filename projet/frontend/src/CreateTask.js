@@ -14,8 +14,9 @@ const CreateTask = () => {
         setTask({...currentTask, [name]: value });
     }
 
-    const onSubmit = () => {
-        axios.post("http://localhost:3001/tasks/addTask",currentTask)
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:3001/tasks/addTask", currentTask);
     }
 
 
