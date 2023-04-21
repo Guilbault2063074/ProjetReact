@@ -44,6 +44,7 @@ function UpdateTask() {
     function handleBackClick() {navigate("/Tasks")}
 
     return(
+        <div style={{backgroundColor:"#a3528f", marginLeft:"30%",marginRight:"30%",padding:"10px", borderRadius:"15px", marginBottom:"10px"}}>
         <form onSubmit={onSubmit} >
         <b>
     <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
@@ -66,6 +67,7 @@ function UpdateTask() {
     <button style={{color:"whitesmoke", backgroundColor:"#a3528f",borderRadius:"10px", marginTop:"10px", fontSize:"medium"}} onClick={handleBackClick}>Back</button>
     </b>
     </form>
+    </div>
     )
 }
 
