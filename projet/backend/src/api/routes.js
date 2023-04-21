@@ -5,11 +5,13 @@ const bodyParser = require("body-parser");
 
 const router = express.Router();
 const app = express();
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-
 const cors = require("cors");
 app.use(cors());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use("/",router);
+
+
 
 
 taskDAO.doConnect();

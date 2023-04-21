@@ -1,10 +1,13 @@
 const taskDAO = require("../dal/TaskDAO");
 
 async function main(){
-    taskDAO.doConnect();
+    await taskDAO.doConnect();
+
+    //const task = {title: "faire le backend", description: "faire les trois couche", isDone: "on"};
+    //await taskDAO.addTask(task);
 
     const result = await taskDAO.findAllTasks();
-    console.log(customers);
+    console.log(result);
 }
 
 main();

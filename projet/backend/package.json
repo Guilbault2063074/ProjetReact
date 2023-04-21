@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "controller": "nodemon ./src/control/BackEndController.js"
+    "controller": "nodemon ./src/control/BackEndController.js",
+    "route": "nodemon ./src/api/routes.js"
   },
   "eslintConfig": {
     "extends": [

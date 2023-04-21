@@ -2,11 +2,8 @@ const mongoose = require("mongoose");
 const Task = require("../model/Task");
 
 async function doConnect(){
-    mongoose.connect("mongodb+srv://ReactDbUser:2023@cluster0.lvayy.mongodb.net/ProjetReact?retryWrites=true&w=majority",
-    {
-        useNewParser:true,
-        useUnifiedTopology:true
-    })
+    mongoose.connect("mongodb+srv://ReactDbUser:2023@cluster0.lvayy.mongodb.net/ProjetReact?retryWrites=true&w=majority")
+    
     .then(() => {console.log("Connected to mongoDB database")})
     .catch((err) => {console.error(err)})
 }
