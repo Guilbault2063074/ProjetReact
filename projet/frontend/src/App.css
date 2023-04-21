@@ -1,5 +1,5 @@
 ul {
-    background-color: #a3528f;
+    background-color: #542c5c;
     padding: 20px;
     text-align: left;
     list-style-type: square;
@@ -37,4 +37,14 @@ h2 {
 
 p,button,h3 {
     color:whitesmoke;
+}
+
+a {
+    color: #1a0dab
+}
+
+form {
+    box-shadow:
+    inset 60px 0 120px #f0f,  /* left magenta */
+    inset -60px 0 120px #0ff; /* right cyan */
 }

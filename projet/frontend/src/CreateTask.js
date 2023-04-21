@@ -1,6 +1,5 @@
 import axios from "axios"
 import {useState} from "react"
-import { useNavigate } from "react-router"
 
 const CreateTask = () => {
     
@@ -15,8 +14,9 @@ const CreateTask = () => {
         setTask({...currentTask, [name]: value });
     }
 
-    const onSubmit = () => {
-        axios.post("/")
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        await axios.post("http://localhost:3001/tasks/addTask", currentTask);
     }
 
 
