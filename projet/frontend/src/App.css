@@ -4,10 +4,14 @@ ul {
     text-align: left;
     list-style-type: square;
     color: blue;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-radius: 10px;
 }
 
 li {
-    font-size: larger;
+    font-size: x-large;
+    margin-left: 10px;
 }
 
 div {

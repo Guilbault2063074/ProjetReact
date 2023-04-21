@@ -1,7 +1,9 @@
 
 import { useState } from "react"
 
-const update = () => {console.log("a")}
+function onSubmit() {
+    console.log("submit")
+}
 
 function UpdateTask() {
 
@@ -18,28 +20,25 @@ function UpdateTask() {
     
 
     return(
-        <div>
-            <h1>Update a task</h1>
-           
-            <div>
-                <label>
-                Title : 
-                <input type="text" onChange={HandleChange}/>
-            </label>
-            <br/>
-            <label>
-                Description : 
-                <input type="text"  onChange={HandleChange} />
-            </label>
-            <br/>
-            <label>
-                Status : 
-                <input type="checkbox"  onChange={HandleChange}/>
-            </label>
-            <br/>
-            <button type="button" onClick={update}>Update</button>
-            </div>
-        </div>
+        <form onSubmit={onSubmit}>
+        <b>
+    <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
+    <br/>
+    <input id="Title" type="text" name="title" onChange={HandleChange}></input><br/><br/>
+    
+
+    <label htmlFor="Description" style={{color:"whitesmoke",}} >Description :</label>
+    <br/>
+    <input id="Description" type="text" name="description" onChange={HandleChange}></input><br/><br/>
+
+
+    <label htmlFor="Title" style={{color:"whitesmoke"}}>Done :</label>
+    <input id="Done" type="checkbox" name="isDone" onChange={HandleChange}></input><br/><br/>
+    
+
+    <input id="Submit" type="submit" value="Update Task" style={{color:"whitesmoke", backgroundColor:"#43223b",borderRadius:"10px"}} onChange={HandleChange}></input>
+    </b>
+    </form>
     )
 }
 

@@ -3,7 +3,7 @@ import './App.css'
 import RouteComponent from "./routes";
 
 function App() {
-  document.body.style = 'background: #43223b;';
+  document.body.style = 'background: #2e1832;';
   return (
     <BrowserRouter>
     <div>
