@@ -1,5 +1,6 @@
 //afficheur de 1 task
 import { useNavigate } from "react-router";
+import DeleteTask from "./DeleteTask";
 
 
 
@@ -15,6 +16,7 @@ const TaskView = (props)=>{
             <p style={{marginTop:"2px"}}>{props.description}</p>
             <p><b><u>Status</u>:</b> {(props.isDone === "on") ? "Done" : "In Progress"}</p>
             <button style={(props.isDone === "off") ? {backgroundColor:"#a3528f",borderRadius:"10px"}:{backgroundColor:"#542c5c",borderRadius:"10px"}} onClick={handleClick}>Update this Task</button>
+            <DeleteTask style={(props.isDone === "off") ? {backgroundColor:"#a3528f",borderRadius:"10px"}:{backgroundColor:"#542c5c",borderRadius:"10px"}}></DeleteTask>
         </div>
     )
 }

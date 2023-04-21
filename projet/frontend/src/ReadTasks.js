@@ -8,7 +8,7 @@ function ReadTask(){
     const [tasks, setTasks] = useState([]);
     
     useEffect(() =>{
-        axios.get("http://localhost:3001/tasks%22")
+        axios.get("http://localhost:3001/tasks")
         .then((resp) => setTasks(resp.data))
     }, [])
 

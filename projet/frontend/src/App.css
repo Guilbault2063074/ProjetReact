@@ -44,7 +44,5 @@ a {
 }
 
 form {
-    box-shadow:
-    inset 60px 0 120px #f0f,  /* left magenta */
-    inset -60px 0 120px #0ff; /* right cyan */
+    font-size: larger;
 }

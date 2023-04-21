@@ -1,14 +1,21 @@
 //juste un bouton pour delete dans readtask
+import axios from "axios";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router";
 
-function deleteTask(){
+function DeleteTask(){
+    const {id} = useParams();
+    const navigate = useNavigate(); 
 
     const handleClick = () =>{
-        //call delete from task controller
+        axios.post("http://localhost:3001/tasks/deleteTask/"+id); 
+        navigate("/Tasks")
     }
 
     return(
-        <div>
-            <button onClick={handleClick}>Delete</button>
-        </div>
+            <button style={{backgroundColor:"inherit",borderRadius:"inherit"}} onClick={handleClick}>Delete this Task</button>
+        
     )
 }
+
+export default DeleteTask
