@@ -1,4 +1,6 @@
+import axios from "axios"
 import {useState} from "react"
+import { useNavigate } from "react-router"
 
 const CreateTask = () => {
     
@@ -13,7 +15,10 @@ const CreateTask = () => {
         setTask({...currentTask, [name]: value });
     }
 
-    const onSubmit = () => {alert(currentTask.title)}
+    const onSubmit = () => {
+        axios.post("/")
+    }
+
 
     return(
         <form onSubmit={onSubmit}>

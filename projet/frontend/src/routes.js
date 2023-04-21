@@ -8,7 +8,7 @@ const RouteComponent = () => (
     <Routes>
         <Route path="/" element={<CreateTask/>}/>
         <Route path="/Tasks" element={<ReadTask/>}/>
-        <Route path="/UpdateTask" element={<UpdateTask/>}/>
+        <Route path="/UpdateTask/:id" element={<UpdateTask/>}/>
     </Routes>
 )
 
