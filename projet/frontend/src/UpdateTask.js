@@ -14,7 +14,7 @@ function UpdateTask() {
         
         var updatabledata = {}
         axios.get("http://localhost:3001/tasks/"+id)
-        .then((resp) => updatabledata = resp.data)})
+        .then((resp) => updatabledata = resp.data)});
 
 
     const [currentTask, setTask] = useState({
@@ -34,7 +34,7 @@ function UpdateTask() {
     function handleClick() {navigate("/Tasks")}
 
     return(
-        <form onSubmit={onSubmit} style={{backgroundColor:"#a3528f", marginLeft:"230px",marginRight:"230px",padding:"10px", borderRadius:"15px", marginBottom:"10px"}}>
+        <form onSubmit={onSubmit} style={{backgroundColor:"#a3528f", marginLeft:"600px",marginRight:"600px",padding:"10px", borderRadius:"15px", marginBottom:"10px"}}>
         <b>
     <label htmlFor="Title" style={{color:"whitesmoke"}}>Title :</label>
     <br/>
